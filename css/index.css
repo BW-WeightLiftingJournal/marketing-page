@@ -40,7 +40,7 @@ img {
   height: auto;
 }
 .container {
-  max-width: 800px;
+  max-width: auto;
   width: 100%;
   margin: 0 auto;
 }
@@ -51,14 +51,15 @@ img {
   font-weight: 400;
   font-size: 20px;
   line-height: 47px;
+  justify-content: center;
 }
 nav {
   background-color: #E5E5E5;
-  width: 100%;
+  width: 800px;
   padding-left: 30px;
   padding-right: 10px;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
 }
 nav img {
@@ -68,6 +69,12 @@ nav img {
 nav .nav-links {
   list-style: none;
   display: flex;
+}
+nav .nav-links .active a {
+  display: inline-block;
+  padding: 10px 15px;
+  text-decoration: none;
+  color: #F26363;
 }
 nav .nav-item a {
   display: inline-block;
@@ -98,7 +105,8 @@ footer p {
 .first {
   background-image: url("../assets/header-img.jpg");
   background-repeat: no-repeat;
-  background-size: 100%;
+  background-size: cover;
+  background-position: center center;
   height: 600px;
   right: 0px;
   width: auto;
@@ -171,6 +179,7 @@ h2 p {
   margin-left: 10%;
   margin-right: 10%;
   line-height: 10px;
+  padding: 20px;
 }
 .second .threeboxes .box {
   display: flex;
@@ -293,4 +302,21 @@ h2 p {
   color: black;
   display: flex;
   width: max-content;
+}
+.about-head {
+  width: 100%;
+  height: 600px;
+  right: 0px;
+  top: 0px;
+}
+.about-head .about {
+  background-image: url("../assets/about-header.png");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  height: 600px;
+  right: 0px;
+  width: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
