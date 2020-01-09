@@ -9,7 +9,7 @@
      background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
-     height: 600px;
+     height: 100%;
      right: 0px;
      width: auto;
      display:flex;
@@ -71,6 +71,7 @@ p{
 
 .second {
   margin-top: 120px;
+  margin-bottom: 120px;
   background-color: @background-color;
   width: 100%;
   display: flex;
@@ -79,6 +80,9 @@ p{
   font-size: 30px;
   font-weight: bold;
   align-items: center;
+  @media (max-width:800px) {
+    margin: 0;
+  }
   .second-border {
     p {
     border-top: 10px solid @color-1;
@@ -94,10 +98,21 @@ p{
     margin-right: 10%;
     line-height: 10px;
     padding: 20px;
+    @media (max-width:800px) {
+      line-height: 2rem;
+      justify-content: space-around;
+      margin: 0;
+      padding: 0;
+    }
     .box{
       h4{
         font-family: Roboto;
         font-size: 2rem;
+        @media (max-width:800px) {
+          line-height: 2rem;
+          justify-content: space-around;
+          margin: 0;
+        }
       }
       display: flex;
       flex-direction: column;
@@ -116,9 +131,13 @@ p{
 }
 .skewed-container {
   margin-top: 0px;
+  display: flex;
+  justify-content: center;
 }
 .skewed {
-  height: 550px;
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
   background: @color-2;
   margin-top: 0px;
   -webkit-transform: skewY(3deg);
@@ -126,8 +145,10 @@ p{
   -ms-transform: skewY(3deg);
   -o-transform: skewY(3deg);
   transform: skewY(3deg);
-  @media (max-width:500px) {
-      margin-top: 100px;
+  @media (max-width:800px) {
+      margin-top: 5%;
+      width: 100%;
+      vertical-align: baseline;
     }
     .to-skew {
       -webkit-transform: skewY(-3deg);
@@ -136,30 +157,33 @@ p{
       -o-transform: skewY(-3deg);
       transform: skewY(-3deg);
       display: flex;
-      justify-content: space-around;
       @media (max-width:800px) {
-          display: flex;
         }
         h3 {
           font-family: Roboto;
           font-weight: 700;
-          font-size: 36px;
+          font-size: 5rem;
           line-height: 44px;
           color: white;
           margin-left: 40px;
-          margin-top: 20%;
-          width: 45%;
+          margin-top: 150px;
+          width: 100%;
           text-align: center;
 
           @media (max-width:800px) {
-              text-align: center;
               margin: 0 auto;
-              margin-top: 200px;
+              margin-top: 1rem;
+              text-align: center;
+              font-size: 4rem;
+              line-height: 100%;
             }
         }
         img {
-          margin-left: 0%;
-          margin-top: -5%;
+          display: flex;
+          padding-right: -500px;
+          margin-left: auto;
+          margin-right: 0%;
+          margin-top: -70px;
           max-height: 650px;
           display: flex;
           @media (max-width:800px) {
@@ -170,18 +194,31 @@ p{
 }
 .success-stories {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   margin-top: 60px;
+  @media (max-width:800px) {
+    flex-direction: column-reverse;
+  
   p{
   font-weight: 900;
 font-size: 3rem;
 line-height: 100%;
 letter-spacing: 0.15em;
+display: flex;
+justify-content: center;
+@media (max-width: 800px) {
+  display: none;
   }
 }
+  }
 .success-boxes {
   border: 20px;
   display: flex;
+  @media (max-width:800px) {
+    flex-direction: column;
+    align-items: center;
+  }
   .success{
     border: 20px solid white;
     width: 33%;
@@ -193,17 +230,29 @@ letter-spacing: 0.15em;
       margin: 0px;
       font-size: 1rem;
       font-weight: bold;
+      @media (max-width: 800px) {
+        display: inline;
+        }
+      }
       }
     }
     img {
-      height: 150px;
+      height: 13rem;
+      @media (max-width:800px) {
+        display: flex;
+      width: 20rem;
+      max-width: max-content;
+      align-items: center;
     }
+  }
   }
 }
 .bottom-button {
 a {
   margin: auto;
   margin-top: 20px;
+  padding-left: 3rem;
+  padding-right: 3rem;
   background-color: @color-2;
   text-decoration: none;
   font-weight: 500;
@@ -213,26 +262,5 @@ a {
   color: @color-1;
   display: flex;
   width: max-content;
-}
-}
-.about-head {
-
-    width: 100%;
-    height: 600px;
-    right: 0px;
-    top: 0px;
-  
-  .about {
-  background-image: url("../assets/about-header.png");
-  background-repeat: no-repeat;
- background-size: 100%;
-  height: 600px;
-  right: 0px;
-  width: auto;
-  display:flex;
-
-flex-direction: column;
-//border: 1px solid @color-1;
-align-items: center;
 }
 }
