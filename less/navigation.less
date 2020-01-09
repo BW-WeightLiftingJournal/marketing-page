@@ -1,0 +1,44 @@
+// Navigation Styles here
+.navigation {
+    display: flex;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+line-height: 47px;
+justify-content: center;
+}
+nav {
+    background-color: @background-color;
+    width: 800px;
+    padding-left: 30px;
+    padding-right: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ 
+  img {
+    display: inline-block;
+    max-width: 50px;
+  }
+  .nav-links{
+    list-style: none;
+    display: flex;
+    .active a{
+      display: inline-block;
+      padding: 10px 15px;
+      text-decoration: none;
+      color: @color-2;
+    }
+  }
+  .nav-item a {
+    display: inline-block;
+    padding: 10px 15px;
+    text-decoration: none;
+    color: @color-1;
+  }
+  .nav-item:hover a{
+    background-color: @color-1;
+    color: @color-2;
+  }
+}
