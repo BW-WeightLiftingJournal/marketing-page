@@ -104,6 +104,15 @@ p{
       margin: 0;
       padding: 0;
     }
+      @media (max-width:500px) {
+        flex-direction: column;
+        line-height: 2rem;
+        justify-content: space-around;
+        align-items: center;
+        margin: 0;
+        padding: 0;
+    }
+  
     .box{
       h4{
         font-family: Roboto;
@@ -188,11 +197,17 @@ p{
           display: flex;
           @media (max-width:800px) {
               display: none;
+              align-items: center;
             }
         }
     }
 }
 .success-stories {
+  display: flex;
+  flex-direction: column;
+  @media (max-width:800px) {
+    flex-direction: column-reverse;
+  }
 h3 {
   display: flex;
   justify-content: center;
