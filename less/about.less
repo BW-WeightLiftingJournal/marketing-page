@@ -1,53 +1,159 @@
 .about-head {
-    width: 100%;
-    right: 0px;
-    top: 0px;
-  
-  .about {
-  background-image: url("../assets/about-header.png");
-  background-repeat: no-repeat;
-  background-position: center center;
- background-size: 100%;
+  width: 100%;
   right: 0px;
-  width: auto;
-  display:flex;
-flex-direction: column;
-align-items: flex-start;
-justify-content: flex-start;
-height: 50rem; 
+  top: 0px;
 
-height: 40%;
+  .about {
+    background-image: url("../assets/about-header.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 100%;
+    right: 0px;
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    height: 50rem;
 
-}
+    height: 40%;
+  }
 }
 .roots {
+  margin: 0;
+  margin-bottom: 120px;
+  background-color: @background-color;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  letter-spacing: 0.2em;
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+  @media (max-width: 800px) {
     margin: 0;
-    margin-bottom: 120px;
-    background-color: @background-color;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    letter-spacing: 0.2em;
-    font-size: 30px;
-    font-weight: bold;
-    text-align: center;
-    @media (max-width:800px) {
-      margin: 0;
-    }  
-    h3 {
-        font-family: Roboto;
-    }
-    p{
-        margin-left: 25%;
-        margin-right: 25%;
-    }
+  }
+  h3 {
+    font-family: Roboto;
+  }
+  p {
+    margin-left: 25%;
+    margin-right: 25%;
+    margin-bottom: 40px;
+  }
+  .our-team {
+      margin-bottom:-40px;
+  }
 }
-.team{
+// .team {
+//   display: flex;
+//   flex-direction: column;
+//   width: 60%;
+//   margin: 0 auto;
+//   .row--team {
+//     display: flex;
+//     width: 100%;
+//     justify-content: space-between;
+//     .card {
+//       width: 33%;
+//       display: flex;
+//       flex-direction: column;
+//       text-align: center;
+//       justify-content: center;
+//       align-items: center;
+//       margin-top: 2rem;
+//       box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+//             h4 {
+//           margin-top: 0;
+//           margin-bottom: 0;
+//       }
+//       p {
+//           margin-top: 0;
+//       }
+//       img {
+//           margin-top: 0.5rem;
+//           border-radius: 30rem;
+//           height: auto;
+//           width: 50%;
+//       }
+//     }
+//   }
+// }
+
+.about-skewed {
+    height: 1133px;
+    background: @color-2;
     display: flex;
-    flex-direction: column;
-    .row1 {
+    margin: 150px 0;
+    -webkit-transform: skewY(-3deg);
+    -moz-transform: skewY(-3deg);
+    -ms-transform: skewY(-3deg);
+    -o-transform: skewY(-3deg);
+    transform: skewY(-3deg);
+    @media (max-width:1061px) {
+        height: 1600px;
+        }
+    @media (max-width:712px) {
+        height: 3500px;
+            }
+    .about-to-skew {
+  -webkit-transform: skewY(3deg);
+  -moz-transform: skewY(3deg);
+  -ms-transform: skewY(3deg);
+  -o-transform: skewY(3deg);
+  transform: skewY(3deg);
+  display: flex;
+  @media (max-width:500px) {
+      margin: 0 auto;
+    }
+    .about-us {
+        margin-top: -200px;
+        display: flex;
+        flex-direction: column;
+        .about-card-container {
+            display: flex;
+            margin-top: 56px;
+            justify-content: space-evenly;
+            flex-flow: row wrap;
+            @media (max-width:500px) {
+                  flex-direction: column;
+                }
+                .card {
+                    font-family: "Roboto", sans-serif;
+                    width: 349px;
+                    background: #f2f2f2;
+                    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+                    display: flex;
+                    flex-direction: column;
+                    margin-top: 40px;
+                    padding: 0;
+                    border: 0;
+                    font-size: 100%;
+                    font: inherit;
+                    vertical-align: baseline;
+                    @media (max-width:500px) {
+                          margin-top: 40px;
+                          align-content: center;
+                        }
+                        img {
+                            margin: 35px 35px 20px 35px;
+                            border-radius: 15px;
+                            vertical-align: baseline;
+                          }
+                          h5 {
+                            text-align: center;
+                            font-weight: bold;
+                            font-size: 24px;
+                            margin-top: 10px;
+                          }
+                          p {
+                            text-align: center;
+                            font-size: 14px;
+                            margin-top: 10px;
+                          }
+                  }  
+            }
 
-
-        border: 1px solid black;
+}
     }
 }
